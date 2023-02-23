@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+*{
+  margin: 0;
+  font-family: 'Yeon Sung', cursive;
+}
+
+.App{
+  height: 100vh;
+  background-color: black;
+}
