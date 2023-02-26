@@ -5,7 +5,8 @@ function actionByKey(key) {
         KeyW: 'moveForward',
         KeyS: 'moveBackward',
         KeyA: 'moveLeft',
-        KeyD: 'moveRight'
+        KeyD: 'moveRight',
+        ShiftLeft : "run"
     }
     return keys[key]
 }
@@ -15,7 +16,8 @@ export const useKeyboardInput = () => {
         moveForward: false,
         moveBackward: false,
         moveLeft: false,
-        moveRight: false
+        moveRight: false,
+        run:false,
     })
 
     useEffect(() => {
