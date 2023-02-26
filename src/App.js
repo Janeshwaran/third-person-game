@@ -1,4 +1,4 @@
-import { Box, OrbitControls, Sky } from "@react-three/drei";
+import { Box, Cloud, OrbitControls, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import { Character } from "./Components/Character";
@@ -11,14 +11,22 @@ function App() {
     <div className="App">
       <Canvas shadows camera={{ fov: 45, position:[0,2,-5] }}>
         <Sky sunPosition={[-100, 20, -100]} />
+        <Cloud
+        position={[0 ,13, -0]} 
+  opacity={0.5}
+  speed={0.4} 
+  width={10}
+  depth={1.5} 
+  segments={20} 
+/>
         <ambientLight intensity={0.3} />
         <pointLight castShadow intensity={0.8} position={[100, 100, 100]} />
         <Physics gravity={[0, -30, 0]}>
-        <Debug color="black" scale={1}>
+        {/* <Debug color="black" scale={1}> */}
         <PlaneMesh/>
         <Character  />
         <EnvAssets/>
-        </Debug>
+        {/* </Debug> */}
         </Physics>
       
         <OrbitControls />
